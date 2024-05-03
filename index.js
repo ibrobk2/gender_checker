@@ -1,19 +1,26 @@
 var btn = document.getElementById('btn');
+var result =  document.getElementById('result');
 
 
 btn.addEventListener('click', ()=>{
+    let username = document.getElementById('in').value;
+    let url = "https://api.genderize.io?name="+username;
+
+
     let gender = {
-        username: document.getElementById('in').value,
-        url: "https://api.genderize.io?name="+this.username,
-        getGender: ()=>{
-            fetch(this.url)
+        
+        getData: function(){
+            fetch(url)
             .then((res)=>res.json())
-            .then((data)=>this.result(data))
+            .then((data)=>this.displayData(data));
         },
-        result: (data)=>{
-            document.getElementById('result').innerHTML = data.name+" your gender is "+data.gender;
+
+
+        displayData: (data)=>{
+            // const {name, gender} = data;
+           result.innerHTML = data.name+" your gender is "+data.gender;
         }
     }
 
-    return gender.getGender();
+    return gender.getData();
 })
