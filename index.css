@@ -1,0 +1,51 @@
+body{
+    background-color: gray;
+  }
+
+
+.container{
+    background-color: white;
+    width: 450px;
+    text-align: center;
+    margin: auto;
+    margin-top: 90px;
+    padding: 50px;
+}
+
+input{
+    padding: 6px;
+    width: 80%;
+    /* border: none; */
+    border-radius: 6px;
+}
+
+label{
+    color: #888;
+}
+
+button{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 9px;
+    border-radius: 4px;
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: dodgerblue;
+}
+
+input:focus{
+    border: none;
+    outline: 2px solid blueviolet;
+}
+
+h2{
+    color: blueviolet;
+}
+
+p#result{
+    color: blueviolet;
+}
